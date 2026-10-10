@@ -8,12 +8,13 @@ void main() {
   print("Medium: 7 USD");
   print("Large: 10 USD");
 
+  // Loop to allow multiple orders
   while (continueOrder == "yes") {
     print("\nEnter pizza size (small, medium, large):");
     String size = stdin.readLineSync()!.toLowerCase();
 
     int price = 0;
-
+    // Determine price based on size
     switch (size) {
       case "small":
         price = 5;
@@ -43,5 +44,7 @@ void main() {
     continueOrder = stdin.readLineSync()!.toLowerCase();
   }
 
-  print("\nThank you for ordering!");
+  print(
+    "\nThank you for ordering!",
+  ); //Display thank you message after the loop ends
 }
